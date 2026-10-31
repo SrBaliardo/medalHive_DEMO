@@ -1,0 +1,95 @@
+/* A moldura web mantém o layout de totem e acrescenta avisos e recuperação local. */
+html,
+body,
+#root {
+  min-width: 320px;
+}
+.web-demo {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+.web-demo .app-shell {
+  flex: 1;
+  min-height: 0;
+  height: auto;
+}
+.demo-toolbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 20px;
+  background: #f2ae2e;
+  color: #171b1f;
+  font-size: 12px;
+}
+.demo-toolbar strong {
+  margin-right: 12px;
+}
+.demo-toolbar button,
+.demo-reset button {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 8px 14px;
+  background: #171b1f;
+  color: #f5f3ed;
+  border: 1px solid #59636e;
+  border-radius: 8px;
+}
+.demo-toolbar button:focus-visible {
+  outline-color: #171b1f;
+}
+.demo-reset {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #242a30;
+}
+.demo-reset p {
+  flex: 1 1 240px;
+  font-size: 13px;
+}
+.demo-error {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  color: #f07178;
+  font-size: 13px;
+}
+@media (max-width: 640px) {
+  .demo-toolbar {
+    padding: 6px 12px;
+    gap: 10px;
+    font-size: 10px;
+  }
+  .demo-toolbar strong {
+    display: block;
+  }
+  .demo-toolbar button {
+    font-size: 11px;
+  }
+  .web-demo .brand-header > img {
+    height: clamp(48px, 10vh, 90px);
+  }
+  .web-demo .page-title {
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .web-demo .page-title p {
+    max-width: 45%;
+    font-size: 11px;
+  }
+  .web-demo .inventory-detail {
+    display: none;
+  }
+  .web-demo .data-panel {
+    overflow-y: auto;
+  }
+  .web-demo .login-page {
+    overflow-y: auto;
+  }
+}

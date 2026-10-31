@@ -1,0 +1,37 @@
+{
+  "name": "medalhive-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MedalHive — demonstração web independente, com simulação local por aba",
+  "author": "Hivetron Technology",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview",
+    "lint": "eslint src tests vite.config.js",
+    "test": "node --test tests/demo.test.js",
+    "format": "prettier --write src tests vite.config.js index.html README.md AGENTS.md"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-qr-code": "2.0.18",
+    "react-router-dom": "7.18.4",
+    "react-simple-keyboard": "3.8.115",
+    "sql.js": "1.15.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@vitejs/plugin-react": "5.2.0",
+    "eslint": "9.39.1",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "globals": "16.3.0",
+    "prettier": "3.6.2",
+    "vite": "7.3.7"
+  }
+}
